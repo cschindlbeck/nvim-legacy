@@ -14,6 +14,19 @@
 
 vim.keymap.set("n", "<leader>tt", [[:ToggleTerm<CR>]])
 
-vim.keymap.set("n", "<leader>f", function()
-  vim.lsp.buf.format()
-end)
+vim.keymap.set("n", "<leader>tr", [[:TroubleToggle<CR>]])
+
+-- Yank entire file
+vim.keymap.set("n", "<C-a>", "gg<S-v>G")
+
+-- Paste and do not overwrite buffer
+vim.keymap.set("x", "<leader>p", "\"_dP")
+vim.keymap.set("n", "<leader>p", "\"+p")
+
+-- Delete into void buffer
+vim.keymap.set("n", "<leader>d", "\"_d")
+vim.keymap.set("v", "<leader>d", "\"_d")
+
+-- Move selected lines in visual mode up, down
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
