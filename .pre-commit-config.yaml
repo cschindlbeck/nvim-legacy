@@ -37,7 +37,7 @@ repos:
     hooks:
       - id: codespell
         args: ['--write-changes']
-        exclude: CHANGELOG\.rst|\.(svg|pyc|drawio|dcf|eds)$
+        exclude: CHANGELOG\.rst|\.(svg|pyc|drawio|dcf|eds)$|lazy-lock.json
 
   - repo: https://github.com/Calinou/pre-commit-luacheck
     rev: v1.0.0

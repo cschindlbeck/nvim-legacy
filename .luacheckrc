@@ -1,5 +1,6 @@
 globals = {
   "vim",
-  "PACKER_BOOTSTRAP",
-  "max-line-length=170",
 }
+-- max_string_line_length = false
+max_line_length = 140
+exclude_files = { "**/*example.lua" }
