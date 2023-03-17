@@ -12,10 +12,6 @@
 --   vim.keymap.set("t", "<C-l>", [[<Cmd>wincmd l<CR>]], opts)
 -- end
 
-vim.keymap.set("n", "<leader>tt", [[:ToggleTerm<CR>]])
-
-vim.keymap.set("n", "<leader>tr", [[:TroubleToggle<CR>]])
-
 -- Yank entire file
 vim.keymap.set("n", "<C-a>", "gg<S-v>G")
 
@@ -30,3 +26,15 @@ vim.keymap.set("v", "<leader>d", "\"_d")
 -- Move selected lines in visual mode up, down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+-- Telescope
+local builtin = require('telescope.builtin')
+vim.api.nvim_set_keymap('n', '<Leader>ff', ':lua require"telescope.builtin".find_files({ hidden = true })<CR>',
+  { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+
+-- Trouble
+vim.keymap.set("n", "<leader>tt", [[:ToggleTerm<CR>]])
+vim.keymap.set("n", "<leader>tr", [[:TroubleToggle<CR>]])
