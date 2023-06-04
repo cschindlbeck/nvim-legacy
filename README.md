@@ -1,6 +1,5 @@
 ![lualint](https://github.com/cschindlbeck/nvim/actions/workflows/lint.yml/badge.svg)
 
-# 💤 LazyVim
+# Neovim Configuration
 
-A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
-Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
+My neovim config based on [LazyVim/starter](https://github.com/LazyVim/starter).
