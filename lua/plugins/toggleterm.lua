@@ -3,7 +3,7 @@ return {
   version = "*",
   config = function()
     require("toggleterm").setup({
-      size = 25,
+      size = 15,
     })
   end,
 }
