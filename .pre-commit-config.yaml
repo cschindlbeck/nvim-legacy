@@ -26,6 +26,7 @@ repos:
       - id: check-yaml
       - id: debug-statements
       - id: end-of-file-fixer
+        exclude: lazy-lock.json
       - id: mixed-line-ending
       - id: trailing-whitespace
       - id: fix-byte-order-marker
@@ -36,7 +37,7 @@ repos:
     rev: v2.2.2
     hooks:
       - id: codespell
-        args: ['--write-changes']
+        args: ["--write-changes"]
         exclude: CHANGELOG\.rst|\.(svg|pyc|drawio|dcf|eds)$|lazy-lock.json|example.lua
 
   - repo: https://github.com/Calinou/pre-commit-luacheck
